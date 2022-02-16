@@ -1,0 +1,74 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "open-in-editor",
+  "title": "Open in Editor",
+  "description": "Quickly opens the specified directory in your editor",
+  "icon": "💻",
+  "author": "jacklewin",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Open in Editor",
+      "description": "Quickly opens the specified directory in your editor",
+      "mode": "view",
+      "keywords": ["vs", "code", "open", "editor"]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "projectsDirectory",
+      "type": "textfield",
+      "required": true,
+      "title": "Projects directory",
+      "description": "The directories to search in (comma-separated list)",
+      "placeholder": "~/path/to/your/projects",
+      "default": "~/code"
+    },
+    {
+      "name": "editor",
+      "type": "appPicker",
+      "required": true,
+      "title": "Editor",
+      "description": "The editor you'd like to use to open your project",
+      "default": "Visual Studio Code"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.28.0",
+    "node-fetch": "^3.0.0",
+    "string-similarity": "^4.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "~16.10.0",
+    "@types/react": "^17.0.28",
+    "@types/string-similarity": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "react-devtools": "^4.19.2",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint"
+  },
+  "keywords": [
+    "atom",
+    "editor",
+    "fleet",
+    "goland",
+    "ide",
+    "idea",
+    "intellij",
+    "pycharm",
+    "sublime",
+    "visual studio code",
+    "vs code",
+    "webstorm"
+  ]
+}
